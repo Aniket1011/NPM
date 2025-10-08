@@ -1,0 +1,20 @@
+{
+	"name": "AzureDatabricks1",
+	"properties": {
+		"parameters": {
+			"Databrick_Workspace_URL": {
+				"type": "string"
+			},
+			"Workspace_Resource_ID": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "@linkedService().Databrick_Workspace_URL",
+			"authentication": "MSI",
+			"workspaceResourceId": "@linkedService().Workspace_Resource_ID"
+		}
+	}
+}
