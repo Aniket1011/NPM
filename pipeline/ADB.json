@@ -1,0 +1,44 @@
+{
+	"name": "ADB",
+	"properties": {
+		"activities": [
+			{
+				"name": "Notebook1",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/yeye"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"Databrick_Workspace_URL": {
+							"value": "@pipeline().globalParameters.Databrick_Workspace_URL",
+							"type": "Expression"
+						},
+						"Workspace_Resource_ID": {
+							"value": "@pipeline().globalParameters.Workspace_Resource_ID",
+							"type": "Expression"
+						}
+					}
+				}
+			}
+		],
+		"parameters": {
+			"PolicyId": {
+				"type": "string",
+				"defaultValue": "16225252552"
+			}
+		},
+		"annotations": []
+	}
+}
