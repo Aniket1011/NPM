@@ -14,7 +14,12 @@
 		"typeProperties": {
 			"domain": "@linkedService().Databrick_Workspace_URL",
 			"authentication": "MSI",
-			"workspaceResourceId": "@linkedService().Workspace_Resource_ID"
+			"workspaceResourceId": "@linkedService().Workspace_Resource_ID",
+			"newClusterNodeType": "Standard_D4ads_v5",
+			"newClusterNumOfWorker": "1",
+			"newClusterVersion": "15.4.x-scala2.12",
+			"clusterOption": "Fixed",
+			"newClusterInitScripts": []
 		}
 	}
 }
