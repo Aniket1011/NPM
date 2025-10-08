@@ -17,6 +17,10 @@
 			"Workspace_Resource_ID": {
 				"type": "string",
 				"value": "www"
+			},
+			"PolicyId": {
+				"type": "int",
+				"value": 1231131
 			}
 		}
 	},
