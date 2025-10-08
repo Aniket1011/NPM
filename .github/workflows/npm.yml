@@ -23,19 +23,19 @@ jobs:
       # Step 3: Install npm packages
       - name: Install npm package
         run: |
-          cd / # replace with folder containing package.json
+          cd $GITHUB_WORKSPACE # replace with folder containing package.json
           npm install
 
       # Step 4: Validate ADF resources
       - name: Validate ADF resources
         run: |
-          cd /
+          cd $GITHUB_WORKSPACE
           npm run build validate $(pwd)/ /subscriptions/51df5574-3a71-4820-8787-73ec31f4d204/resourceGroups/Ani_practice/providers/Microsoft.DataFactory/factories/AniketDemo
 
       # Step 5: Validate and generate ARM template
       - name: Validate and Generate ARM template
         run: |
-          cd /
+          cd $GITHUB_WORKSPACE
           npm run build export $(pwd)/ /subscriptions/51df5574-3a71-4820-8787-73ec31f4d204/resourceGroups/Ani_practice/providers/Microsoft.DataFactory/factories/AniketDemo "ArmTemplate"
           # If using preview build:
           # npm run build-preview export $(pwd)/ /subscriptions/51df5574-3a71-4820-8787-73ec31f4d204/resourceGroups/Ani_practice/providers/Microsoft.DataFactory/factories/AniketDemo "ArmTemplate"
