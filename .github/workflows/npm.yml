@@ -13,7 +13,11 @@ jobs:
       # Step 1: Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
-
+        
+      - name: List contents of GITHUB_WORKSPACE
+        run: |
+          echo "Listing contents of \$GITHUB_WORKSPACE:"
+          ls -la $GITHUB_WORKSPACE
       # Step 2: Setup Node.js
       - name: Install Node.js
         uses: actions/setup-node@v2
