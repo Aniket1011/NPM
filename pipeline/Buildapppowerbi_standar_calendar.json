@@ -4,6 +4,7 @@
 		"activities": [
 			{
 				"name": "ForEach1_sbo_calender",
+				"description": "www",
 				"type": "ForEach",
 				"dependsOn": [],
 				"userProperties": [],
