@@ -13,8 +13,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-steps:
 
 # Installs Node and the npm packages saved in your package.json file in the build
 
