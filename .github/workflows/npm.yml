@@ -1,12 +1,17 @@
 # Sample YAML file to validate and export an ARM template into a build artifact
 # Requires a package.json file located in the target repository
 
-trigger:
-- main #collaboration branch
-
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment'
+        required: true
+        default: 'DEV'
 jobs:
   validate_and_generate_arm_template:
     runs-on: ubuntu-latest
+    
 steps:
 
 # Installs Node and the npm packages saved in your package.json file in the build
