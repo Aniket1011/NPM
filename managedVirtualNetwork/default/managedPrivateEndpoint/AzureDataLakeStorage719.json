@@ -1,0 +1,7 @@
+{
+	"name": "AzureDataLakeStorage719",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/51df5574-3a71-4820-8787-73ec31f4d204/resourceGroups/Ani_practice/providers/Microsoft.Storage/storageAccounts/aniketdemo",
+		"groupId": "dfs"
+	}
+}

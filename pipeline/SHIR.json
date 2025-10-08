@@ -1,0 +1,39 @@
+{
+	"name": "SHIR",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "00:15:00",
+					"retry": 1,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"headers": {
+						"Content-Type": "application/json"
+					},
+					"httpRequestTimeout": "00:10:00",
+					"url": "https://your-api-endpoint.com/long-running-task",
+					"connectVia": {
+						"referenceName": "Snowflake",
+						"type": "IntegrationRuntimeReference"
+					},
+					"body": {
+						"parameter1": "value1",
+						"parameter2": "valu"
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-04-25T11:46:53Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

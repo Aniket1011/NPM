@@ -1,0 +1,30 @@
+{
+	"name": "SapOdp",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SapOdp",
+		"typeProperties": {
+			"clientId": "100",
+			"sncMode": false,
+			"userName": "P77_BATCH",
+			"subscriberName": "SAP_CDC",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault_sap",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "P77-BATCH"
+			},
+			"messageServer": "p77.batgen.com",
+			"messageServerService": "3605",
+			"systemId": "P77",
+			"logonGroup": "SLTUSER"
+		},
+		"connectVia": {
+			"referenceName": "BAP-Runtime-SAP-01",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

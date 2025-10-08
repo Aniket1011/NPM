@@ -1,0 +1,21 @@
+{
+	"name": "AniketDemo",
+	"properties": {
+		"globalParameters": {
+			"Aniket": {
+				"type": "string",
+				"value": "kelkar"
+			},
+			"Demo": {
+				"type": "int",
+				"value": 5
+			}
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8ff60383-c45f-44c5-9536-3b0aa6cfaa9e",
+		"tenantId": "16b3c013-d300-468d-ac64-7eda0820b6d3"
+	}
+}

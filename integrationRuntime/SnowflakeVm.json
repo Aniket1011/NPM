@@ -1,0 +1,6 @@
+{
+	"name": "SnowflakeVm",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"name": "ServiceNow_test",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "ServiceNowV2",
+		"typeProperties": {
+			"endpoint": "https://pepsicosb.service-now.com/",
+			"authenticationType": "Basic",
+			"username": "SNADLPOISYNC_TEST.INTEGRATION",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhYTA1YjA5YS1jNzc0LTQ1ZDQtOGQ0MC0wNjM0OTA5ZTA3MTciLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SnowflakeVm",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

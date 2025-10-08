@@ -1,0 +1,12 @@
+{
+	"name": "SHIR",
+	"properties": {
+		"type": "SelfHosted",
+		"typeProperties": {
+			"linkedInfo": {
+				"resourceId": "/subscriptions/51df5574-3a71-4820-8787-73ec31f4d204/resourcegroups/Ani_practice/providers/Microsoft.DataFactory/factories/Ternary/integrationruntimes/SHIR",
+				"authorizationType": "Rbac"
+			}
+		}
+	}
+}

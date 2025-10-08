@@ -1,0 +1,673 @@
+{
+	"name": "ServiceNowObject1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ServiceNow_test",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "ServiceNowV2Object",
+		"schema": [
+			{
+				"name": "x_splu2_splunk_ser_splunk_url",
+				"type": "url"
+			},
+			{
+				"name": "rfc",
+				"type": "reference"
+			},
+			{
+				"name": "parent_incident",
+				"type": "reference"
+			},
+			{
+				"name": "origin_table",
+				"type": "table_name"
+			},
+			{
+				"name": "calendar_stc",
+				"type": "integer"
+			},
+			{
+				"name": "incident_state",
+				"type": "integer"
+			},
+			{
+				"name": "u_problem_candidate",
+				"type": "boolean"
+			},
+			{
+				"name": "actions_taken",
+				"type": "journal_input"
+			},
+			{
+				"name": "u_project_name",
+				"type": "reference"
+			},
+			{
+				"name": "x_caci_cisco_dna_360_analysis",
+				"type": "string"
+			},
+			{
+				"name": "x_caci_cisco_dna_issue_category",
+				"type": "reference"
+			},
+			{
+				"name": "reopened_time",
+				"type": "glide_date_time"
+			},
+			{
+				"name": "resolved_at",
+				"type": "glide_date_time"
+			},
+			{
+				"name": "u_current_recovery_plan_status",
+				"type": "string"
+			},
+			{
+				"name": "x_laso_systrack_bl_systrack_detected_issues_record",
+				"type": "string_full_utf8"
+			},
+			{
+				"name": "u_email",
+				"type": "string"
+			},
+			{
+				"name": "x_caci_cisco_dna_cisco_dna_mac_address",
+				"type": "string"
+			},
+			{
+				"name": "u_work_item",
+				"type": "choice"
+			},
+			{
+				"name": "u_current_business_impact",
+				"type": "string"
+			},
+			{
+				"name": "hold_reason",
+				"type": "integer"
+			},
+			{
+				"name": "u_skype_link",
+				"type": "url"
+			},
+			{
+				"name": "u_key_participants",
+				"type": "string"
+			},
+			{
+				"name": "problem_id",
+				"type": "reference"
+			},
+			{
+				"name": "child_incidents",
+				"type": "integer"
+			},
+			{
+				"name": "x_laso_systrack_bl_asset_details",
+				"type": "html"
+			},
+			{
+				"name": "u_ado_work_item_type",
+				"type": "string"
+			},
+			{
+				"name": "severity",
+				"type": "integer"
+			},
+			{
+				"name": "u_webex_phone_number",
+				"type": "string"
+			},
+			{
+				"name": "u_ado_number",
+				"type": "string"
+			},
+			{
+				"name": "origin_id",
+				"type": "document_id"
+			},
+			{
+				"name": "notify",
+				"type": "integer"
+			},
+			{
+				"name": "x_caci_cisco_dna_u_string_1",
+				"type": "string"
+			},
+			{
+				"name": "x_laso_systrack_bl_systrack_compliance_record",
+				"type": "string_full_utf8"
+			},
+			{
+				"name": "x_laso_systrack_bl_persona_crit_apps",
+				"type": "html"
+			},
+			{
+				"name": "x_sesri_ssc_itsm_securityscorecard_event",
+				"type": "reference"
+			},
+			{
+				"name": "u_phone",
+				"type": "string"
+			},
+			{
+				"name": "x_laso_systrack_bl_system_changes",
+				"type": "html"
+			},
+			{
+				"name": "trigger_rule",
+				"type": "reference"
+			},
+			{
+				"name": "close_code",
+				"type": "string"
+			},
+			{
+				"name": "overview",
+				"type": "html"
+			},
+			{
+				"name": "x_caci_cisco_dna_network_userid",
+				"type": "string"
+			},
+			{
+				"name": "u_missing_ci_name",
+				"type": "string"
+			},
+			{
+				"name": "timeline",
+				"type": "html"
+			},
+			{
+				"name": "sys_id",
+				"type": "GUID"
+			},
+			{
+				"name": "x_thq_threatq_threatq_score",
+				"type": "integer"
+			},
+			{
+				"name": "reopen_count",
+				"type": "integer"
+			},
+			{
+				"name": "u_vendor_name",
+				"type": "reference"
+			},
+			{
+				"name": "subcategory",
+				"type": "string"
+			},
+			{
+				"name": "x_caci_cisco_dna_u_string_2",
+				"type": "string"
+			},
+			{
+				"name": "caller_id",
+				"type": "reference"
+			},
+			{
+				"name": "u_mim",
+				"type": "boolean"
+			},
+			{
+				"name": "x_caci_cisco_dna_cisco_dna_comments",
+				"type": "string"
+			},
+			{
+				"name": "u_detected_by",
+				"type": "reference"
+			},
+			{
+				"name": "major_incident_state",
+				"type": "string"
+			},
+			{
+				"name": "promoted_on",
+				"type": "glide_date_time"
+			},
+			{
+				"name": "cause",
+				"type": "string"
+			},
+			{
+				"name": "u_target_date",
+				"type": "due_date"
+			},
+			{
+				"name": "reopened_by",
+				"type": "reference"
+			},
+			{
+				"name": "u_proposed_by",
+				"type": "reference"
+			},
+			{
+				"name": "x_caci_cisco_dna_cisco_360_view",
+				"type": "url"
+			},
+			{
+				"name": "proposed_on",
+				"type": "glide_date_time"
+			},
+			{
+				"name": "u_missing_ci",
+				"type": "boolean"
+			},
+			{
+				"name": "x_caci_cisco_dna_suggested_actions",
+				"type": "string"
+			},
+			{
+				"name": "x_tsirm_tio_itsm_tenable_io_vulnerability",
+				"type": "reference"
+			},
+			{
+				"name": "u_preferred_contact_email_or_phone",
+				"type": "choice"
+			},
+			{
+				"name": "lessons_learned",
+				"type": "html"
+			},
+			{
+				"name": "x_laso_systrack_bl_systrack_snapshot_id",
+				"type": "string"
+			},
+			{
+				"name": "x_caci_cisco_dna_cisco_dna_center_ip_address",
+				"type": "string"
+			},
+			{
+				"name": "u_create_work_item_in_ado",
+				"type": "boolean"
+			},
+			{
+				"name": "x_bip_panda_bigpanda_id",
+				"type": "string"
+			},
+			{
+				"name": "business_stc",
+				"type": "integer"
+			},
+			{
+				"name": "u_proposed",
+				"type": "glide_date_time"
+			},
+			{
+				"name": "category",
+				"type": "string"
+			},
+			{
+				"name": "u_close_code",
+				"type": "string"
+			},
+			{
+				"name": "caused_by",
+				"type": "reference"
+			},
+			{
+				"name": "u_first_assignment",
+				"type": "reference"
+			},
+			{
+				"name": "u_ado_description",
+				"type": "string"
+			},
+			{
+				"name": "business_impact",
+				"type": "string"
+			},
+			{
+				"name": "promoted_by",
+				"type": "reference"
+			},
+			{
+				"name": "u_vendor_ticket_number",
+				"type": "string"
+			},
+			{
+				"name": "resolved_by",
+				"type": "reference"
+			},
+			{
+				"name": "x_caci_cisco_dna_cisco_dna_created",
+				"type": "boolean"
+			},
+			{
+				"name": "u_mim_user",
+				"type": "reference"
+			},
+			{
+				"name": "x_laso_systrack_bl_systrack_diagnostics_record",
+				"type": "string_full_utf8"
+			},
+			{
+				"name": "u_ci_description",
+				"type": "string"
+			},
+			{
+				"name": "x_laso_systrack_bl_systrack_diagnostics",
+				"type": "html"
+			},
+			{
+				"name": "proposed_by",
+				"type": "reference"
+			},
+			{
+				"name": "x_caci_cisco_dna_cisco_dna_suggested_actions_commands_output",
+				"type": "string"
+			},
+			{
+				"name": "u_glide_date_time_2",
+				"type": "glide_date_time"
+			},
+			{
+				"name": "u_rpt_sum_of_incident_resolve_time_by_month",
+				"type": "glide_duration"
+			},
+			{
+				"name": "sys_domain_path",
+				"type": "domain_path"
+			},
+			{
+				"name": "business_service",
+				"type": "reference"
+			},
+			{
+				"name": "company",
+				"type": "reference"
+			},
+			{
+				"name": "opened_by",
+				"type": "reference"
+			},
+			{
+				"name": "impact",
+				"type": "integer"
+			},
+			{
+				"name": "group_list",
+				"type": "glide_list"
+			},
+			{
+				"name": "short_description",
+				"type": "string"
+			},
+			{
+				"name": "approval_set",
+				"type": "glide_date_time"
+			},
+			{
+				"name": "contact_type",
+				"type": "string"
+			},
+			{
+				"name": "description",
+				"type": "string"
+			},
+			{
+				"name": "closed_at",
+				"type": "glide_date_time"
+			},
+			{
+				"name": "activity_due",
+				"type": "due_date"
+			},
+			{
+				"name": "service_offering",
+				"type": "reference"
+			},
+			{
+				"name": "made_sla",
+				"type": "boolean"
+			},
+			{
+				"name": "sys_created_by",
+				"type": "string"
+			},
+			{
+				"name": "delivery_plan",
+				"type": "reference"
+			},
+			{
+				"name": "upon_reject",
+				"type": "string"
+			},
+			{
+				"name": "state",
+				"type": "integer"
+			},
+			{
+				"name": "closed_by",
+				"type": "reference"
+			},
+			{
+				"name": "escalation",
+				"type": "integer"
+			},
+			{
+				"name": "additional_assignee_list",
+				"type": "glide_list"
+			},
+			{
+				"name": "work_start",
+				"type": "glide_date_time"
+			},
+			{
+				"name": "active",
+				"type": "boolean"
+			},
+			{
+				"name": "work_notes",
+				"type": "journal_input"
+			},
+			{
+				"name": "follow_up",
+				"type": "glide_date_time"
+			},
+			{
+				"name": "assigned_to",
+				"type": "reference"
+			},
+			{
+				"name": "time_worked",
+				"type": "timer"
+			},
+			{
+				"name": "sys_domain",
+				"type": "domain_id"
+			},
+			{
+				"name": "sys_created_on",
+				"type": "glide_date_time"
+			},
+			{
+				"name": "u_bil",
+				"type": "string"
+			},
+			{
+				"name": "delivery_task",
+				"type": "reference"
+			},
+			{
+				"name": "correlation_id",
+				"type": "string"
+			},
+			{
+				"name": "work_notes_list",
+				"type": "glide_list"
+			},
+			{
+				"name": "variables",
+				"type": "variables"
+			},
+			{
+				"name": "u_project_id",
+				"type": "glide_list"
+			},
+			{
+				"name": "expected_start",
+				"type": "glide_date_time"
+			},
+			{
+				"name": "priority",
+				"type": "integer"
+			},
+			{
+				"name": "reassignment_count",
+				"type": "integer"
+			},
+			{
+				"name": "universal_request",
+				"type": "reference"
+			},
+			{
+				"name": "sys_class_name",
+				"type": "sys_class_name"
+			},
+			{
+				"name": "approval",
+				"type": "string"
+			},
+			{
+				"name": "knowledge",
+				"type": "boolean"
+			},
+			{
+				"name": "parent",
+				"type": "reference"
+			},
+			{
+				"name": "close_notes",
+				"type": "string"
+			},
+			{
+				"name": "due_date",
+				"type": "glide_date_time"
+			},
+			{
+				"name": "contract",
+				"type": "reference"
+			},
+			{
+				"name": "sn_fin_accounting_period",
+				"type": "reference"
+			},
+			{
+				"name": "assignment_group",
+				"type": "reference"
+			},
+			{
+				"name": "calendar_duration",
+				"type": "glide_duration"
+			},
+			{
+				"name": "order",
+				"type": "integer"
+			},
+			{
+				"name": "sys_mod_count",
+				"type": "integer"
+			},
+			{
+				"name": "upon_approval",
+				"type": "string"
+			},
+			{
+				"name": "wf_activity",
+				"type": "reference"
+			},
+			{
+				"name": "correlation_display",
+				"type": "string"
+			},
+			{
+				"name": "sys_updated_by",
+				"type": "string"
+			},
+			{
+				"name": "comments_and_work_notes",
+				"type": "journal_list"
+			},
+			{
+				"name": "skills",
+				"type": "glide_list"
+			},
+			{
+				"name": "urgency",
+				"type": "integer"
+			},
+			{
+				"name": "watch_list",
+				"type": "glide_list"
+			},
+			{
+				"name": "number",
+				"type": "string"
+			},
+			{
+				"name": "approval_history",
+				"type": "journal"
+			},
+			{
+				"name": "location",
+				"type": "reference"
+			},
+			{
+				"name": "rejection_goto",
+				"type": "reference"
+			},
+			{
+				"name": "comments",
+				"type": "journal_input"
+			},
+			{
+				"name": "opened_at",
+				"type": "glide_date_time"
+			},
+			{
+				"name": "sla_due",
+				"type": "due_date"
+			},
+			{
+				"name": "cmdb_ci",
+				"type": "reference"
+			},
+			{
+				"name": "business_duration",
+				"type": "glide_duration"
+			},
+			{
+				"name": "cmdb_ci_business_app",
+				"type": "reference"
+			},
+			{
+				"name": "work_end",
+				"type": "glide_date_time"
+			},
+			{
+				"name": "route_reason",
+				"type": "integer"
+			},
+			{
+				"name": "user_input",
+				"type": "user_input"
+			},
+			{
+				"name": "sys_updated_on",
+				"type": "glide_date_time"
+			},
+			{
+				"name": "task_effective_number",
+				"type": "string"
+			}
+		],
+		"typeProperties": {
+			"tableName": "incident"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

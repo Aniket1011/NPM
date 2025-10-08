@@ -1,0 +1,15 @@
+{
+	"name": "AzureDataLakeStorage_gbl",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://storpdwebapgblprod01.dfs.core.windows.net/"
+		},
+		"connectVia": {
+			"referenceName": "adf-managed-ir",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

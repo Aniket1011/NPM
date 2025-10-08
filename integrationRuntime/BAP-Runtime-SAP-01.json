@@ -1,0 +1,7 @@
+{
+	"name": "BAP-Runtime-SAP-01",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "BAP-Runtime-SAP-01"
+	}
+}

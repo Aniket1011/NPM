@@ -1,0 +1,79 @@
+{
+	"name": "dataflow_SAP_Extraction_Full",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "SapOdp",
+						"type": "LinkedServiceReference"
+					},
+					"name": "SAPSource",
+					"description": "Import data from SapOdp"
+				}
+			],
+			"sinks": [
+				{
+					"linkedService": {
+						"referenceName": "AzureDataLakeStorage_gbl",
+						"type": "LinkedServiceReference"
+					},
+					"name": "DeltaSink",
+					"rejectedDataLinkedService": {
+						"referenceName": "AzureDataLakeStorage_gbl",
+						"type": "LinkedServiceReference"
+					}
+				}
+			],
+			"transformations": [
+				{
+					"name": "AddColumn"
+				}
+			],
+			"scriptLines": [
+				"parameters{",
+				"     sapObjectName as string,",
+				"     sapKeyColumns as string[],",
+				"     deltaContainer as string,",
+				"     deltaFolder as string,",
+				"     sapRunMode as string,",
+				"     sapContext as string",
+				"}",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     store: 'SapOdp',",
+				"     format: 'sapObject',",
+				"     staged: true,",
+				"     context: ($sapContext),",
+				"     objectName: ($sapObjectName),",
+				"     readMode: ($sapRunMode),",
+				"     keys: ($sapKeyColumns),",
+				"     fixDecimalPrecision: true,",
+				"     parallelCopies: 8,",
+				"     enableMultiLineRow: true) ~> SAPSource",
+				"SAPSource derive(UPDATE_TS = currentTimestamp()) ~> AddColumn",
+				"AddColumn sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'delta',",
+				"     fileSystem: ($deltaContainer),",
+				"     folderPath: ($deltaFolder),",
+				"     overwrite: true,",
+				"     mergeSchema: true,",
+				"     autoCompact: false,",
+				"     optimizedWrite: true,",
+				"     vacuum: 0,",
+				"     deletable: false,",
+				"     insertable: true,",
+				"     updateable: false,",
+				"     upsertable: false,",
+				"     keys:($sapKeyColumns),",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> DeltaSink"
+			]
+		}
+	}
+}

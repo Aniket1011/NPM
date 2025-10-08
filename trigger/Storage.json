@@ -1,0 +1,24 @@
+{
+	"name": "Storage",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_EQY_DLS_RAW_DLS_CLN_COURSE_DTLS",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/adf/blobs/.csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/51df5574-3a71-4820-8787-73ec31f4d204/resourceGroups/Ani_practice/providers/Microsoft.Storage/storageAccounts/aniketdemo",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
