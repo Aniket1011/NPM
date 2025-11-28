@@ -9,19 +9,10 @@
 			"Demo": {
 				"type": "int",
 				"value": 5
-			},
-			"Databrick_Workspace_URL": {
-				"type": "string",
-				"value": "www"
-			},
-			"Workspace_Resource_ID": {
-				"type": "string",
-				"value": "www"
-			},
-			"PolicyId": {
-				"type": "int",
-				"value": 1231131
 			}
+		},
+		"globalConfigurations": {
+			"PolicyValidationEnabled": "true"
 		}
 	},
 	"location": "eastus",
